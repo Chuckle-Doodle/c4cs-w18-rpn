@@ -1,7 +1,7 @@
 #1/usr/bin/env python3
 
 def calculate(arg):
-    pass
+    stack = list()
 
 def main():
     while True:
