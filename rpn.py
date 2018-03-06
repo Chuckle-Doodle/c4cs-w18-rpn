@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 import operator
-#import colored
-#from colored import stylize
+import colored
+from colored import stylize
 
 operators = {
     '+': operator.add,
@@ -25,15 +25,14 @@ def calculate(myarg):
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
-        '''for s in stack:
+        for s in stack:
             if int(s) < 0:
                 print(stylize(s, colored.fg("red")), end='')
                 print(" ", end='')
             else:
                 print(s, end='')
                 print(" ", end='')
-        print('')'''
-        print(stack)
+        print('')
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
