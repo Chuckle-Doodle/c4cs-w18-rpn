@@ -30,8 +30,6 @@ def calculate(myarg):
             result = function(arg1, arg2)
             stack.append(result)
         for s in stack:
-            if s == 0:
-                print("ZERO HERE!!!")
             if int(s) < 0:
                 print(stylize(s, colored.fg("red")), end='')
                 print(" ", end='')
