@@ -1,12 +1,12 @@
 language: python
 python: "3.5"
-script: make test
+script:
+  make test
+  nosetests --with-coverage # Add me to run nose with coverage support.
 install:
   pip install colored
   pip install python-coveralls
   pip install coverage   #add me to install coverage.py
   pip install nose     #add me to install nose
-script:
-  nosetests --with-coverage # Add me to run nose with coverage support.
 after_success:
   coveralls
