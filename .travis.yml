@@ -3,3 +3,10 @@ python: "3.5"
 script: make test
 install:
   pip install colored
+  pip install python-coveralls
+  pip install coverage   #add me to install coverage.py
+  pip install nose     #add me to install nose
+script:
+  nosetests --with-coverage # Add me to run nose with coverage support.
+after_success:
+  coveralls
