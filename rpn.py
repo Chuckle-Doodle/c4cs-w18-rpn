@@ -31,6 +31,9 @@ def calculate(myarg):
             if int(s) < 0:
                 print(stylize(s, colored.fg("red")), end='')
                 print(" ", end='')
+            if int(s) > 10:
+                print(stylize(s, colored.fg("blue")), end='')
+                print(" ", end='')
             else:
                 print(s, end='')
                 print(" ", end='')
@@ -43,7 +46,8 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        print("Result: ", end='')
+        print(stylize(result, colored.fg("green")))
 
 
 if __name__ == '__main__':
