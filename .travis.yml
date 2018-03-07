@@ -1,13 +1,12 @@
 language: python
 python: "3.5"
 install:
-  pip install colored
-  pip install python-coveralls
-  pip install coverage
-  pip install nose
+  - pip install colored
+  - pip install python-coveralls
+  - pip install coverage
+  - pip install nose
 script:
-  make test
-  python rpn.py install
-  nosetests --with-coverage
+  - make test
+  - nosetests --with-coverage
 after_success:
-  coveralls
+  - coveralls
