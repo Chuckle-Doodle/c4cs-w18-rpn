@@ -32,6 +32,7 @@ def calculate(myarg):
             else:
                 print(s, end='')
                 print(" ", end='')
+        print("hi")
         print('')
     if len(stack) != 1:
         raise TypeError("Too many parameters")
